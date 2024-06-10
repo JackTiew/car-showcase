@@ -33,15 +33,15 @@ const SearchManufacturer = (props: SearchManufacturerProps) => {
                         <ComboboxOptions>
                             {
                                 filteredManufacturers.map(item => (
-                                    <ComboboxOption key={item} className={({ active }) => `relative search-manufacturer__option ${active ? 'bg-primary-blue text-white' : 'text-gray-900'}`} value={item}>
-                                        {({ selected, active }) => (
+                                    <ComboboxOption key={item} className={({ focus }) => `relative search-manufacturer__option ${focus ? 'bg-primary-blue text-white' : 'text-gray-900'}`} value={item}>
+                                        {({ selected, focus }) => (
                                             <>
                                                 <span className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>
                                                     {item}
                                                 </span>
                                                 {
                                                     selected ? (
-                                                        <span className={`asbsolute inset-y-0 left-0 flex items-center pl-3 ${active ? 'text-white' : 'text-teal-600'}`}></span>
+                                                        <span className={`asbsolute inset-y-0 left-0 flex items-center pl-3 ${focus ? 'text-white' : 'text-teal-600'}`}></span>
                                                     ) : null
                                                 }
                                             </>
